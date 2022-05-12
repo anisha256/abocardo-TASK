@@ -3,13 +3,14 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 const Nav = styled.div`
+  top: 0;
   width: 100%;
   height: 60px;
   color: white;
   background-color: lightcoral;
   display: grid;
   grid-template-columns: 60px 1fr 2fr 1.5fr 60px;
-  font-family: "Josefin Sans";
+  font-family: sans-serif;
   position: sticky;
   -webkit-box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.09);
   -moz-box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.09);
@@ -59,8 +60,8 @@ const Hambuger = styled.div`
 const MobileMenu = styled.div`
   display: flex;
   position: absolute;
-  flex-direction:column;
-  top:45px;
+  flex-direction: column;
+  top: 45px;
   right: 0;
   width: 100%;
   padding: 20px;
@@ -70,7 +71,7 @@ const MobileMenu = styled.div`
   a {
     text-decoration: none;
     color: white;
-    margin-bottom:20px;
+    margin-bottom: 20px;
   }
   a.active {
     color: red;
@@ -80,7 +81,6 @@ const MobileMenu = styled.div`
   }
   background-color: rgba(230, 126, 126, 0.27);
   /* background-color: pink; */
-  
 `;
 
 const Navbar = () => {
