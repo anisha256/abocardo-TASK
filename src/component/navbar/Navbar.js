@@ -16,7 +16,7 @@ const Nav = styled.div`
   -moz-box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.09);
   box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.09);
   @media screen and (max-width: 1080px) {
-    height: 45px;
+    /* height: 45px; */
     grid-template-columns: 45px 3fr 2fr 3fr 45px;
   }
 `;
@@ -61,7 +61,7 @@ const MobileMenu = styled.div`
   display: flex;
   position: absolute;
   flex-direction: column;
-  top: 45px;
+  top: 60px;
   right: 0;
   width: 100%;
   padding: 20px;
@@ -97,20 +97,18 @@ const Navbar = () => {
         </NavLeft>
         <NavCenter>
           <NavLink to="/">Home</NavLink>
-
-          <NavLink to="/about">About</NavLink>
-
-          <NavLink to="/generate">Generate</NavLink>
+          <NavLink to="/user">User</NavLink>
+          <NavLink to="/generate">Table UI</NavLink>
+          {/* <NavLink to="/tabledata">Table Data</NavLink> */}
         </NavCenter>
         <Hambuger>
           <GiHamburgerMenu onClick={() => setSetMediaIcon(!showMediaIcon)} />
           {showMediaIcon && (
             <MobileMenu>
               <NavLink to="/">Home</NavLink>
-
-              <NavLink to="/about">About</NavLink>
-
-              <NavLink to="/generate">Generate</NavLink>
+              <NavLink to="/user">User</NavLink>
+              <NavLink to="/generate">Table UI</NavLink>
+              {/* <NavLink to="/tabledata">Table Data</NavLink> */}
             </MobileMenu>
           )}
         </Hambuger>
