@@ -1,11 +1,12 @@
 import Navbar from "./component/navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Generate from "./pages/Generate";
+
 import PostDetail from "./pages/posts/PostComments";
 import AddPost from "./pages/posts/AddPost";
 import User from "./pages/User";
 import PostComments from "./pages/posts/PostComments";
+import TableUI from "./pages/TableUI";
 // import TableData from "./pages/TableData"
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Route exact path="/post/:postId/comments" element={<PostComments />} />
           {/* <Route exact path="/tabledata" element={<TableData />} /> */}
 
-          <Route exact path="/generate" element={<Generate />} />
+          <Route exact path="/tableui" element={<TableUI />} />
         </Routes>
       </Router>
     </>

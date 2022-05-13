@@ -14,7 +14,7 @@ import {
   Paper,
 } from "@mui/material";
 
-const Generate = () => {
+const TableUI = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const handleChangePage = (event, newPage) => {
@@ -225,7 +225,7 @@ const Generate = () => {
   );
 };
 
-export default Generate;
+export default TableUI;
 
 const Container = styled.div`
   height: 100%;

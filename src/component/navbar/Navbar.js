@@ -98,7 +98,7 @@ const Navbar = () => {
         <NavCenter>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/user">User</NavLink>
-          <NavLink to="/generate">Table UI</NavLink>
+          <NavLink to="/tableui">Table UI</NavLink>
           {/* <NavLink to="/tabledata">Table Data</NavLink> */}
         </NavCenter>
         <Hambuger>
@@ -107,7 +107,7 @@ const Navbar = () => {
             <MobileMenu>
               <NavLink to="/">Home</NavLink>
               <NavLink to="/user">User</NavLink>
-              <NavLink to="/generate">Table UI</NavLink>
+              <NavLink to="/tableui">Table UI</NavLink>
               {/* <NavLink to="/tabledata">Table Data</NavLink> */}
             </MobileMenu>
           )}
