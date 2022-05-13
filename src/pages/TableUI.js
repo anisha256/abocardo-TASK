@@ -27,7 +27,7 @@ const TableUI = () => {
   };
   const [finalData, setFinalData] = useState([]);
   const [formData, setFormData] = useState({
-    _id:'',
+    _id: "",
     layout: "",
     name: "",
     capacity: "",
@@ -43,20 +43,18 @@ const TableUI = () => {
   };
   const handleData = (e) => {
     e.preventDefault();
-  
-
-    toast.info(
-      `layout:${formData.layout} name:${formData.name} capacity:${formData.capacity} status:${formData.status} image:${formData.image.name} `,
-      {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      }
-    );
+    // toast.info(
+    //   `layout:${formData.layout} name:${formData.name} capacity:${formData.capacity} status:${formData.status} image:${formData.image.name} `,
+    //   {
+    //     position: "top-right",
+    //     autoClose: 5000,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //   }
+    // );
     finalData._id = uuid();
     setFinalData([...finalData, formData]);
 
@@ -171,7 +169,6 @@ const TableUI = () => {
                   <TableCell align="left" style={{ minWidth: 170 }}>
                     Image
                   </TableCell>
-                
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -188,7 +185,9 @@ const TableUI = () => {
                         <TableCell align="left">{row.layout}</TableCell>
                         <TableCell align="left">{row.name}</TableCell>
                         <TableCell align="left">{row.capacity}</TableCell>
-                        <TableCell align="left">{row.status ? 'True' : 'False'}</TableCell>
+                        <TableCell align="left">
+                          {row.status ? "True" : "False"}
+                        </TableCell>
                         <TableCell align="left">
                           {row.image.name.slice(0, 6)}....
                           {row.image.name.slice(row.image.name.length - 6)}
@@ -233,7 +232,7 @@ const Container = styled.div`
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
-  gap:30px;
+  gap: 30px;
   @media screen and (max-width: 1080px) {
     margin: 45px;
   }
