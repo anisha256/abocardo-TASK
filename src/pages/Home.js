@@ -16,32 +16,31 @@ const Listingdiv = styled.div`
   margin: 50px 200px;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid black; */
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: 998px) {
     margin: 50px 50px;
-    justify-content: center;
-    align-items: center;
   }
 `;
 const NewPost = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-bottom: 20px;
-  a{
+  a {
     text-decoration: none;
   }
 `;
 const Add = styled.div`
- border: 1px solid lightgray;
-    background-color: white;
-    color: lightpink;
-    cursor: pointer;
+  border: 1px solid lightgray;
+  background-color: white;
+  cursor: pointer;
+  padding: 15px;
+  color: lightcoral;
 `;
 const Home = () => {
   const posts = useSelector((state) => state);
   console.log(posts);
   const dispatch = useDispatch();
-
 
   const fetchPosts = async () => {
     const res = await axios
@@ -52,7 +51,7 @@ const Home = () => {
     console.log(res.data);
     dispatch(getPosts(res.data));
   };
-  const handleAddPost =()=>{
+  const handleAddPost = () => {
     // console.log("clicked");
     // const config = {
     //   headers: {
@@ -63,13 +62,9 @@ const Home = () => {
     //   "https://jsonplaceholder.typicode.com/posts",
     //   data,
     //   config,
-      
     // );
     // console.log("data:", data);
-  
-    
-
-  }
+  };
 
   useEffect(() => {
     fetchPosts();
@@ -79,7 +74,9 @@ const Home = () => {
     <Listingdiv>
       <NewPost>
         <Link to="/post/add">
-        <Add >+ADD NEW POST</Add>
+          <Add>
+            <span>+ADD NEW POST</span>
+          </Add>
         </Link>
       </NewPost>
       <Post />

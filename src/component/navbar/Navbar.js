@@ -2,6 +2,42 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
+
+const Navbar = () => {
+  const [showMediaIcon, setSetMediaIcon] = useState(false);
+
+  return (
+    <>
+      <Nav>
+        <NavLeft>
+          <h2>
+            <span>R</span>eact
+            <span>T</span>ask
+          </h2>
+        </NavLeft>
+        <NavCenter>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/user">User</NavLink>
+          <NavLink to="/tableui">Table UI</NavLink>
+          {/* <NavLink to="/tabledata">Table Data</NavLink> */}
+        </NavCenter>
+        <Hambuger>
+          <GiHamburgerMenu onClick={() => setSetMediaIcon(!showMediaIcon)} />
+          {showMediaIcon && (
+            <MobileMenu>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/user">User</NavLink>
+              <NavLink to="/tableui">Table UI</NavLink>
+              {/* <NavLink to="/tabledata">Table Data</NavLink> */}
+            </MobileMenu>
+          )}
+        </Hambuger>
+      </Nav>
+    </>
+  );
+};
+
+export default Navbar;
 const Nav = styled.div`
   top: 0;
   width: 100%;
@@ -16,7 +52,6 @@ const Nav = styled.div`
   -moz-box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.09);
   box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.09);
   @media screen and (max-width: 1080px) {
-    /* height: 45px; */
     grid-template-columns: 45px 3fr 2fr 3fr 45px;
   }
 `;
@@ -30,7 +65,8 @@ const NavCenter = styled.div`
   display: flex;
   grid-column: 4/5;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  column-gap:30px;
   color: white;
   a {
     text-decoration: none;
@@ -80,41 +116,4 @@ const MobileMenu = styled.div`
     color: red;
   }
   background-color: rgba(230, 126, 126, 0.27);
-  /* background-color: pink; */
 `;
-
-const Navbar = () => {
-  const [showMediaIcon, setSetMediaIcon] = useState(false);
-
-  return (
-    <>
-      <Nav>
-        <NavLeft>
-          <h2>
-            <span>R</span>eact
-            <span>T</span>ask
-          </h2>
-        </NavLeft>
-        <NavCenter>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/user">User</NavLink>
-          <NavLink to="/tableui">Table UI</NavLink>
-          {/* <NavLink to="/tabledata">Table Data</NavLink> */}
-        </NavCenter>
-        <Hambuger>
-          <GiHamburgerMenu onClick={() => setSetMediaIcon(!showMediaIcon)} />
-          {showMediaIcon && (
-            <MobileMenu>
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/user">User</NavLink>
-              <NavLink to="/tableui">Table UI</NavLink>
-              {/* <NavLink to="/tabledata">Table Data</NavLink> */}
-            </MobileMenu>
-          )}
-        </Hambuger>
-      </Nav>
-    </>
-  );
-};
-
-export default Navbar;

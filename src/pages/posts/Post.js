@@ -7,15 +7,15 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Container = styled.div`
-  width: 500px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-bottom: 30px;
   /* border: 1px solid pink; */
   @media screen and (max-width: 998px) {
-    width: 300px;
+    width: 500px;
     height: 400px;
   }
 `;
@@ -63,16 +63,29 @@ const CommentBox = styled.div`
     margin: 20px;
     border: none;
     width: 80%;
+    &:active{
+     outline: none;
+     border: none;
+    }
+    &:focus{
+      outline: 0;
+      border: none;
+     
+    }
   }
   button {
     color: blue;
     border: none;
-    background-color: white;
+    background-color:white;
+    padding-right: 20px;
+    
+  
   }
 `;
 const Delete = styled.div`
-  color: pink;
+  color: lightcoral;
   cursor: pointer;
+  
 
 `;
 

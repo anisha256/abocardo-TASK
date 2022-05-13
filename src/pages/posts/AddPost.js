@@ -20,22 +20,21 @@ const AddPost = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  const handleData = async(e) => {
+  const handleData = async (e) => {
     e.preventDefault();
-     console.log("clicked");
+    console.log("clicked");
     const config = {
       headers: {
         "Content-Type": "application/json",
       },
     };
-    const {data} = await axios.post(
+    const { data } = await axios.post(
       "https://jsonplaceholder.typicode.com/posts",
       data,
-      config,
-      
+      config
     );
     console.log("data:", data);
-  
+
     toast.success("Post is Added Sucessfully", {
       position: "top-right",
       autoClose: 5000,
@@ -123,9 +122,6 @@ const Container = styled.div`
 const SubContainer = styled.div`
   height: 400px;
   width: 100%;
-  /* border-left: 2px solid lightgrey; */
-  @media screen and (max-width: 1080px) {
-  }
 `;
 
 const FormWrapper = styled.div`
@@ -194,10 +190,15 @@ const FormDiv = styled.div`
 const FormInput = styled.input`
   height: 30px;
   border: none;
-  border-radius: 3px;
   width: 600px;
+  border-bottom: 1px solid grey;
+  &:active {
+    outline: none;
+    border: none;
+    background-color: white;
+  }
   &:focus {
-    background-color: rgb(63, 65, 65);
+    outline: 0;
     border: none;
   }
 `;
