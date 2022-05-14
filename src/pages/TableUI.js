@@ -43,18 +43,6 @@ const TableUI = () => {
   };
   const handleData = (e) => {
     e.preventDefault();
-    // toast.info(
-    //   `layout:${formData.layout} name:${formData.name} capacity:${formData.capacity} status:${formData.status} image:${formData.image.name} `,
-    //   {
-    //     position: "top-right",
-    //     autoClose: 5000,
-    //     hideProgressBar: false,
-    //     closeOnClick: true,
-    //     pauseOnHover: true,
-    //     draggable: true,
-    //     progress: undefined,
-    //   }
-    // );
     finalData._id = uuid();
     setFinalData([...finalData, formData]);
 

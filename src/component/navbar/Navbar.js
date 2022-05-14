@@ -17,18 +17,16 @@ const Navbar = () => {
         </NavLeft>
         <NavCenter>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/user">User</NavLink>
           <NavLink to="/tableui">Table UI</NavLink>
-          {/* <NavLink to="/tabledata">Table Data</NavLink> */}
+          <NavLink to="/taskcompletes">TaskCompleted</NavLink>
         </NavCenter>
         <Hambuger>
           <GiHamburgerMenu onClick={() => setSetMediaIcon(!showMediaIcon)} />
           {showMediaIcon && (
             <MobileMenu>
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/user">User</NavLink>
               <NavLink to="/tableui">Table UI</NavLink>
-              {/* <NavLink to="/tabledata">Table Data</NavLink> */}
+              <NavLink to="/taskcompletes">TaskCompleted</NavLink>
             </MobileMenu>
           )}
         </Hambuger>
