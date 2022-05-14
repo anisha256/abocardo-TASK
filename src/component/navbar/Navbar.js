@@ -18,7 +18,7 @@ const Navbar = () => {
         <NavCenter>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/tableui">Table UI</NavLink>
-          <NavLink to="/taskcompletes">TaskCompleted</NavLink>
+          <NavLink to="/taskcompleted">TaskCompleted</NavLink>
         </NavCenter>
         <Hambuger>
           <GiHamburgerMenu onClick={() => setSetMediaIcon(!showMediaIcon)} />
@@ -26,7 +26,7 @@ const Navbar = () => {
             <MobileMenu>
               <NavLink to="/">Home</NavLink>
               <NavLink to="/tableui">Table UI</NavLink>
-              <NavLink to="/taskcompletes">TaskCompleted</NavLink>
+              <NavLink to="/taskcompleted">TaskCompleted</NavLink>
             </MobileMenu>
           )}
         </Hambuger>
