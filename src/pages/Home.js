@@ -488,7 +488,7 @@ const CommentsDiv = styled.div`
   color: white;
   border-bottom: 1px solid white;
   padding: 10px;
-  font-size: 8px;
+  font-size: 12px;
   p {
   }
   span {
