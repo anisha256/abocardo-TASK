@@ -43,6 +43,7 @@ const SubContainer = styled.div`
   padding:20px;
    span{
        font-size: 20px;
+       color: green;
        
    }
 `;
