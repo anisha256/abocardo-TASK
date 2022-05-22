@@ -119,18 +119,7 @@ const Home = () => {
     setComments(res.data);
     console.log("comments", comments);
   };
-  //handle delete
-  const handleDelete = () => {
-    toast.success(" Deleted Sucessfully", {
-      position: "top-right",
-      autoClose: 400,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
-  };
+ 
 
   useEffect(() => {
     fetchPosts();
@@ -230,7 +219,7 @@ const Home = () => {
               <PostC>
                 <Header>
                   <Avatar />
-                  <Delete onClick={handleDelete}>
+                  <Delete >
                     <FiTrash2 onClick={() => deletePost(id)} />
                   </Delete>
                 </Header>
